@@ -1,10 +1,7 @@
 /* =========================================================================
    KHEPER — procedural mystery engine + dossier-dashboard UI
-   Single-file implementation. Sections: DATA POOLS, GENERATOR, STATE,
-   RENDERERS, INTERACTIONS, PERSISTENCE.
    ========================================================================= */
 
-/* ---------------------------- RNG helpers ---------------------------- */
 function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
 function pickN(arr,n){
   const pool=[...arr]; const out=[];
@@ -15,7 +12,6 @@ function pickN(arr,n){
 function shuffle(arr){ return pickN(arr,arr.length); }
 function uid(prefix){ return prefix+'_'+Math.random().toString(36).slice(2,9); }
 
-/* ---------------------------- DATA POOLS ---------------------------- */
 const NAMES_F = ["Elena","Priya","Naomi","Sofia","Camille","Rina","Delphine","Amara","Vivienne","Yuki","Farah","Ingrid"];
 const NAMES_M = ["Marcus","Devan","Julian","Rahul","Otto","Idris","Nathaniel","Kenji","Théo","Amos","Callum","Ezra"];
 const SURNAMES = ["Ashford","Voss","Kapoor","Renwick","Delacroix","Okafor","Marchetti","Solberg","Whitfield","Nakamura","Byrne","Castellan","Moreau","Alderidge","Petrov","Kimura"];
